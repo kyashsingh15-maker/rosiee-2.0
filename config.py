@@ -11,35 +11,35 @@ class Config:
         self.BOT_TOKEN = getenv("BOT_TOKEN", "9160938427:AAGrX0KSGSThbx3wh1ibGHUrFVCS6CjvavY")
         self.MONGO_URL = getenv("MONGO_URL", "mongodb+srv://public:abishnoimf@cluster0.rqk6ihd.mongodb.net/?retryWrites=true&w=majority")
 
-        self.LOGGER_ID = int(getenv("LOGGER_ID", 5436045769))
+        self.LOGGER_ID = int(getenv("LOGGER_ID", -1003150808065))
         self.OWNER_ID = int(getenv("OWNER_ID", 8516736963))
 
         self.DURATION_LIMIT = int(getenv("DURATION_LIMIT", 60)) * 60
         self.QUEUE_LIMIT = int(getenv("QUEUE_LIMIT", 20))
         self.PLAYLIST_LIMIT = int(getenv("PLAYLIST_LIMIT", 20))
 
-        self.SESSION1 = getenv("SESSION", "BAFRwgAAKtH4gBQ2_eG4yLIm5aJhje4AwPvDWbfXKjKZ4vvUI6W5fuh_HTbj9giinPy-9rKrjifsIzmGO_zS9Q1So_AFqZKyH5yOcGChpUZvbHDEfmEOBY2kH2qqooUPGioAz47XKcOtuEy8idGp-JQv-hBawR1fStyNuYliNBlrQ_L9vUjX8Cs0CaYbvIhiyytkoGnTfmGdOO_2eNb9PJh_b2u2ye3kvDAHta-R4UKZjILaRQ3NV2T_D4uPUJQa0Ezk8Y7yMVUo02q6JzLbJgsS30qTGTI5viRr2wXfCZmH0sc7upb3mtAkIC41HglF_-TXAeHp4OOqP7kHNv7bEEDl6gAAAAIJ678XAA")
+        self.SESSION1 = getenv("SESSION", "BAIgI4sAqBGlPQAYu39MR0OcmFCRj-x9i9ggs7IxaEnDi4tco-A-oUW8aSC7hLXkaqEAtp88RaxlANlEFBKFqoUTY2WO6hkwF1AegXtaKqVJl9MIi-k72bSG4GDT1dKwuaexTJ4sb6-icn3HT0uAfDVZQTQKcT9lyYTg2TMoZXAO3A2Z_3mCtHXjZBerUglQdJxJR9FchqcOA-DvFklYyqe08k3EHL0FROtnLFgCmmauPXm5Uo3WHKGF4M4Gkcl1mbuvhD1N1ycDCcWXZx5c51lh42rEukTQKA2S6QMARWxXNnNCQPNk5gVHKJDCZrtnsJl9Zg1WABQs1D-BzYMMepVKfrbpgQAAAAIJ678XAA")
         self.SESSION2 = getenv("SESSION2", None)
         self.SESSION3 = getenv("SESSION3", None)
 
-        self.SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/fallenx")
-        self.SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/DevilsHeavenMF")
+        self.SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/Senpai_Updates")
+        self.SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/THE_DRAGON_SUPPORT")
 
         self.AUTO_LEAVE: bool = getenv("AUTO_LEAVE", "False").lower() == "true"
         self.AUTO_END: bool = getenv("AUTO_END", "False").lower() == "true"
 
-        self.THUMB_GEN: bool = getenv("THUMB_GEN", "True").lower() == "true"
-        self.VIDEO_PLAY: bool = getenv("VIDEO_PLAY", "True").lower() == "true"
+        self.THUMB_GEN: bool = getenv("THUMB_GEN", "False").lower() == "true"
+        self.VIDEO_PLAY: bool = getenv("VIDEO_PLAY", "False").lower() == "true"
 
         self.LANG_CODE = getenv("LANG_CODE", "en")
 
         self.COOKIES_URL = [
-            url for url in getenv("COOKIES_URL", "").split(" ")
+            url for url in getenv("COOKIES_URL", "https://batbin.me/logomancy").split(" ")
             if url and "batbin.me" in url
         ]
         self.DEFAULT_THUMB = getenv("DEFAULT_THUMB", "https://te.legra.ph/file/3e40a408286d4eda24191.jpg")
-        self.PING_IMG = getenv("PING_IMG", "https://files.catbox.moe/haagg2.png")
-        self.START_IMG = getenv("START_IMG", "https://files.catbox.moe/zvziwk.jpg")
+        self.PING_IMG = getenv("PING_IMG", "https://files.catbox.moe/z4tco8.jpg")
+        self.START_IMG = getenv("START_IMG", "https://files.catbox.moe/unu7ar.jpg")
 
     def check(self):
         missing = [
@@ -49,4 +49,3 @@ class Config:
         ]
         if missing:
             raise SystemExit(f"Missing required environment variables: {', '.join(missing)}")
-            
